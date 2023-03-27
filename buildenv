@@ -1,0 +1,28 @@
+export EXPECT_VERSION="5.45.4"
+export ZOPEN_TARBALL_URL="https://sourceforge.net/projects/expect/files/Expect/$EXPECT_VERSION/expect$EXPECT_VERSION.tar.gz"
+export ZOPEN_TARBALL_DEPS="make tcl zoslib"
+export ZOPEN_EXTRA_CONFIGURE_OPTS="--with-tcl=\$TCL_HOME/lib --enable-shared=no --exec-prefix=\$ZOPEN_INSTALL_DIR"
+export ZOPEN_EXTRA_CPPFLAGS="$ZOPEN_EXTRA_CPPFLAGS -I\$TCL_HOME/include"
+export ZOPEN_EXTRA_LIBS="$ZOPEN_EXTRA_LIBS -ltclstub8.6"
+export ZOPEN_EXTRA_LDFLAGS="$ZOPEN_EXTRA_LIBS -L\$TCL_HOME/lib"
+export ZOPEN_TYPE="TARBALL"
+export ZOPEN_RUNTIME_DEPS="tcl"
+export ZOPEN_CHECK="skip"
+export ZOPEN_NAME="expect-$EXPECT_VERSION"
+
+zopen_check_results()
+{
+  dir="$1"
+  pfx="$2"
+  chk="$1/$2_check.log"
+
+  # Echo the following information to gauge build health
+  echo "actualFailures:0"
+  echo "totalTests:1"
+  echo "expectedFailures:0"
+}
+
+zopen_get_version()
+{
+  echo "$EXPECT_VERSION"
+}

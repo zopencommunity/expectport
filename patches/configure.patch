@@ -1,0 +1,17 @@
+diff --git a/configure b/configure
+index 8fc3396..cf34e34 100755
+--- a/configure
++++ b/configure
+@@ -6880,12 +6880,6 @@ $as_echo "$as_me: Removing 64-bit architectures from compiler & linker flags" >&
+ fi
+ 
+ fi
+-	    ;;
+-	OS/390-*)
+-	    CFLAGS_OPTIMIZE=""		# Optimizer is buggy
+-
+-$as_echo "#define _OE_SOCKETS 1" >>confdefs.h
+-
+ 	    ;;
+ 	OSF1-V*)
+ 	    # Digital OSF/1

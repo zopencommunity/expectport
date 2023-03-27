@@ -1,0 +1,14 @@
+diff --git a/Makefile.in b/Makefile.in
+index 2d36791..ec58537 100644
+--- a/Makefile.in
++++ b/Makefile.in
+@@ -396,7 +396,8 @@ expect:	exp_main_exp.o $(PKG_LIB_FILE)
+ 		@TCL_LIB_SPEC@ \
+ 		@TCL_DL_LIBS@ @PKG_LIBS@ @MATH_LIBS@ \
+ 		@TCL_CC_SEARCH_FLAGS@ \
+-		@EXP_CC_SEARCH_FLAGS@
++		@EXP_CC_SEARCH_FLAGS@ \
++		@LIBS@
+ 	$(SETUID) expect
+ 
+ expectk:
