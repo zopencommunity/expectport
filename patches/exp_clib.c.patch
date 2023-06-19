@@ -1,0 +1,12 @@
+diff --git a/exp_clib.c b/exp_clib.c
+index 1699775..d463a77 100644
+--- a/exp_clib.c
++++ b/exp_clib.c
+@@ -9,6 +9,7 @@ would appreciate credit if this program or parts of it are used.
+ 
+ #include "expect_cf.h"
+ #include <stdio.h>
++#include <unistd.h>
+ #include <setjmp.h>
+ #ifdef HAVE_INTTYPES_H
+ #  include <inttypes.h>
