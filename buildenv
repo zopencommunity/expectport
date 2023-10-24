@@ -1,11 +1,13 @@
+# bump: expect-version /EXPECT_VERSION="(.*)"/ 'https://sourceforge.net/projects/expect/files/Expect/|re:/latest(.*)expect([\d.]+).tar.gz/$2/|semver:*'
+
 export EXPECT_VERSION="5.45.4"
-export ZOPEN_TARBALL_URL="https://sourceforge.net/projects/expect/files/Expect/$EXPECT_VERSION/expect$EXPECT_VERSION.tar.gz"
-export ZOPEN_TARBALL_DEPS="make tcl zoslib"
+export ZOPEN_STABLE_URL="https://sourceforge.net/projects/expect/files/Expect/$EXPECT_VERSION/expect$EXPECT_VERSION.tar.gz"
+export ZOPEN_STABLE_DEPS="make tcl zoslib"
 export ZOPEN_EXTRA_CONFIGURE_OPTS="--with-tcl=\$TCL_HOME/lib --enable-shared=no --exec-prefix=\$ZOPEN_INSTALL_DIR"
 export ZOPEN_EXTRA_CPPFLAGS="$ZOPEN_EXTRA_CPPFLAGS -I\$TCL_HOME/include"
 export ZOPEN_EXTRA_LIBS="$ZOPEN_EXTRA_LIBS -ltclstub8.6"
 export ZOPEN_EXTRA_LDFLAGS="$ZOPEN_EXTRA_LIBS -L\$TCL_HOME/lib"
-export ZOPEN_TYPE="TARBALL"
+export ZOPEN_BUILD_LINE="STABLE"
 export ZOPEN_RUNTIME_DEPS="tcl"
 export ZOPEN_CHECK="skip"
 export ZOPEN_NAME="expect-$EXPECT_VERSION"
