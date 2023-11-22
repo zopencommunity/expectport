@@ -1,4 +1,4 @@
-# bump: expect-version /EXPECT_VERSION="(.*)"/ 'https://sourceforge.net/projects/expect/files/Expect/|re:/Click.to.enter.([\d.]+)"/$1/|semver:*'
+# bump: expect-version /EXPECT_VERSION="(.*)"/ https://sourceforge.net/projects/expect/files/Expect/|re:/Click.to.enter.([\d.]+)"/$1/|semver:*
 
 export EXPECT_VERSION="5.45.4"
 export ZOPEN_STABLE_URL="https://sourceforge.net/projects/expect/files/Expect/$EXPECT_VERSION/expect$EXPECT_VERSION.tar.gz"
