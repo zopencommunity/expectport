@@ -2,6 +2,7 @@
 
 export EXPECT_VERSION="5.45.4"
 export ZOPEN_STABLE_URL="https://sourceforge.net/projects/expect/files/Expect/$EXPECT_VERSION/expect$EXPECT_VERSION.tar.gz"
+export ZOPEN_CATEGORIES="development"
 export ZOPEN_STABLE_DEPS="make tcl zoslib"
 export ZOPEN_EXTRA_CONFIGURE_OPTS="--with-tcl=\$TCL_HOME/lib --enable-shared=no --exec-prefix=\$ZOPEN_INSTALL_DIR"
 export ZOPEN_EXTRA_CPPFLAGS="$ZOPEN_EXTRA_CPPFLAGS -I\$TCL_HOME/include"
